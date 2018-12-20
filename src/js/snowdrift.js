@@ -22,6 +22,7 @@ function Snowdrift(scene, congereWidth) {
     c.style.zIndex = 1100;
     c.style.position = 'absolute';
     c.style.display = 'block';
+    c.style.top = '0px';
     c.style.pointerEvents = 'none';
     this.canvas = c;
     this.ctx = this.canvas.getContext('2d');
