@@ -250,6 +250,9 @@ StarsAnimation.prototype = {
         this.controlBtn.addEventListener('click', function () {
 
             if (self.controlState == 'notstarted') {
+                // this line is needed because of Chrome new sound policy on mobile devices
+                Tone.context.resume();
+                
                 // start the transport to hear the events
                 Tone.Transport.start("+0.3");
                 snowStorm.start();
